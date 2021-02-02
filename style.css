@@ -14,6 +14,11 @@ body {
   overflow-x: hidden;
 }
 
+.body {
+  overflow-x: hidden;
+  position: relative;
+}
+
 #header {
   width: 75vw;
   display: flex;
@@ -165,4 +170,56 @@ footer {
 }
 .fade-in-element {
   animation: fade-in 0.7s;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 700px) {
+  .design-card {
+    width: 100%;
+  }
+  .design-card:hover {
+    transform: none;
+  }
+  .content-section {
+    width: 80vw;
+  }
+  #header {
+    height: fit-content;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    margin: 10vh 0;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .name {
+    color: var(--color-text-lighter);
+    display: block;
+    font-size: 15vw;
+  }
+
+  .heading-grey {
+    color: var(--color-text-darker);
+    font-size: 13vw;
+    font-weight: 100;
+  }
+
+  .heading-image {
+    position: absolute;
+    z-index: -1000;
+    top: 10px;
+    left: 0vw;
+    width: 200vw;
+  }
+
+  .section-heading {
+    font-size: 8vw;
+  }
+  .contact-adress {
+    font-size: 5vw;
+  }
+  .contact-description {
+    font-size: 4vw;
+  }
 }
