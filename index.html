@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/fonts/Ubuntu/stylesheet.css">
+    <title>Importantus</title>
+</head>
+<body>
+    <header id="header">
+        <div class="heading">
+            <span class="greeting heading-grey">Shht!</span>
+            <span class="heading-grey pronoun">It's</span>
+            <span class="name">importantus.</span>
+        </div>
+        <img src="./assets/images/setup.svg" alt="image of my setup" class="heading-image">
+    </header>
+    <section id="designs" class="content-section hidden">
+        <h2 class="section-heading">Design.</h2>
+        <div class="design-carousel">
+            <a class="design-card" href="https://handout.draculente.eu" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/it-sicherheit/it-sicherheit.png" alt="project it security" class="design-img">
+                <div class="design-footer"></div>
+            </a>
+            <a class="design-card" href="https://magycyan.gg" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/magycyan-gg/magycyan-gg.png" alt="project magycyan.gg" class="design-img">
+                <div class="design-footer"></div>
+            </a>
+            <a class="design-card" href="https://zeitfuermeer.de/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/zeit-fuer-meer/zeit-fuer-meer.png" alt="project website for holiday flat wolke 9" class="design-img">
+                <div class="design-footer"></div>
+            </a>
+        </div>
+    </section>
+    <section id="contact" class="content-section hidden">
+        <h2 class="section-heading">Contact.</h2>
+        <div class="contact-info">
+            <div class="colum1 colum">
+                <div class="contact-card">
+                    <a href="mailto:importantus@vivaldi.net" class="contact-adress" target="_blank" rel="noopener noreferrer">Importantus@vivaldi.net</a>
+                    <p class="contact-description">E-Mail</p>
+                </div>
+                <div class="contact-card">
+                    <a href="https://t.me/importantus" class="contact-adress" target="_blank" rel="noopener noreferrer">@importantus</a>
+                    <p class="contact-description">Telegram</p>
+                </div>
+                <div class="contact-card">
+                    <a href="https://discord.gg" class="contact-adress" target="_blank" rel="noopener noreferrer">Importantus#4540</a>
+                    <p class="contact-description">Discord</p>
+                </div>
+                <div class="contact-card">
+                    <a href="https://threema.ch/" class="contact-adress" target="_blank" rel="noopener noreferrer">43EHF56D</a>
+                    <p class="contact-description">Threema</p>
+                </div>
+            </div>
+            <div class="colum2 colum">
+                <div class="contact-card">
+                    <a href="https://twitter.com/VIImportantus" class="contact-adress" target="_blank" rel="noopener noreferrer">@VIIImportantus</a>
+                    <p class="contact-description">Twitter</p>
+                </div>
+                <div class="contact-card">
+                    <a href="https://keybase.io/importantus" class="contact-adress" target="_blank" rel="noopener noreferrer">importantus</a>
+                    <p class="contact-description">Keybase</p>
+                </div>
+                <div class="contact-card">
+                    <a href="https://mstdn.social/@importantus" class="contact-adress" target="_blank" rel="noopener noreferrer">@Importantus</a>
+                    <p class="contact-description">Mastadon</p>
+                </div>
+                <div class="contact-card">
+                    <a href="https://www.reddit.com/user/importantus/" class="contact-adress" target="_blank" rel="noopener noreferrer">u/importantus</a>
+                    <p class="contact-description">Reddit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <!-- Just for the background -->
+    </footer>
+    <script>
+    // from https://www.dev-tips-and-tricks.com/animate-elements-scrolled-view-vanilla-js
+    (function () {
+            var elements;
+            var windowHeight;
+
+            function init() {
+                elements = document.querySelectorAll('.hidden');
+                windowHeight = window.innerHeight;
+            }
+
+            function checkPosition() {
+                for (var i = 0; i < elements.length; i++) {
+                    var element = elements[i];
+                    var positionFromTop = elements[i].getBoundingClientRect().top;
+
+                    if (positionFromTop - windowHeight <= 0) {
+                        element.classList.add('fade-in-element');
+                        element.classList.remove('hidden');
+                    }
+                }
+            }
+
+            window.addEventListener('scroll', checkPosition);
+            window.addEventListener('resize', init);
+
+            init();
+            checkPosition();
+        })();</script>
+</body>
+</html>
